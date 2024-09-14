@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Registration Form | CodingLab</title>
+    <link rel="stylesheet" href="Sregistration.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function validateForm() {
+            var password = document.getElementById("password").value;
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters long");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <i class="uil uil-times form_close"></i>
+        <div class="title">Student Registration</div>
+        <div class="content">
+            <form name="registrationForm" action="Student.php" method="post" onsubmit="return validateForm()">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Full Name</span>
+                        <input type="text" id="firstName" class="firstName" name="firstName" placeholder="Enter your name" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Email</span>
+                        <input type="email" id="email" class="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Phone Number </span>
+                        <input type="tel" id="phoneNumber" class="phoneNumber" name="phoneNumber" placeholder="Enter mobile Phone Number" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Student ID</span><br>
+                        <input type="text" id="studentId" class="studentId" name="studentId" placeholder="Enter your student ID" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Password</span>
+                        <input type="password" id="password" name="password" class="password" placeholder="Enter your password" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Address</span>
+                        <textarea id="address" class="address" name="address" placeholder="Enter your address" required></textarea>
+                    </div>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Register">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
